@@ -1,0 +1,38 @@
+{
+  "name": "leif",
+  "version": "1.0.0",
+  "description": "Leif — a simple forest-green note app with Claude built in",
+  "author": "You",
+  "main": "electron/main.js",
+  "homepage": "./",
+  "private": true,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "dev": "concurrently \"cross-env BROWSER=none react-scripts start\" \"wait-on http://localhost:3000 && electron .\"",
+    "dist": "react-scripts build && electron-builder"
+  },
+  "build": {
+    "appId": "com.leif.app",
+    "productName": "Leif",
+    "files": ["build/**/*", "electron/**/*"],
+    "directories": { "output": "release" },
+    "win": { "target": "nsis" },
+    "mac": { "target": "dmg", "category": "public.app-category.productivity" },
+    "linux": { "target": "AppImage" }
+  },
+  "browserslist": { "production": [">0.2%", "not dead"], "development": ["last 1 chrome version"] },
+  "dependencies": {
+    "marked": "^12.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "cross-env": "^7.0.3",
+    "electron": "^28.3.3",
+    "electron-builder": "^24.13.3",
+    "wait-on": "^7.2.0"
+  }
+}

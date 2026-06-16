@@ -1,0 +1,10 @@
+{
+  "name": "leif-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server exposing Leif notes to Claude Desktop",
+  "type": "module",
+  "main": "server.js",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  }
+}
