@@ -18,6 +18,7 @@
     "directories": { "output": "release" },
     "files": ["build/**/*"],
     "extraMetadata": { "main": "build/electron.js" },
+    "publish": null,
     "win": { "target": "nsis" },
     "mac": { "target": "dmg", "category": "public.app-category.productivity" },
     "linux": { "target": "AppImage" }
