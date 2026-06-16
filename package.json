@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Leif — a simple forest-green note app with Claude built in",
   "author": "You",
-  "main": "electron/main.js",
+  "main": "public/electron.js",
   "homepage": "./",
   "private": true,
   "scripts": {
@@ -15,8 +15,9 @@
   "build": {
     "appId": "com.leif.app",
     "productName": "Leif",
-    "files": ["build/**/*", "electron/**/*"],
     "directories": { "output": "release" },
+    "files": ["build/**/*"],
+    "extraMetadata": { "main": "build/electron.js" },
     "win": { "target": "nsis" },
     "mac": { "target": "dmg", "category": "public.app-category.productivity" },
     "linux": { "target": "AppImage" }
